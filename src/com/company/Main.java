@@ -1,10 +1,13 @@
 package com.company;
 
 import com.company.AutoboxingAndInboxing.AutoboxingAndInboxing;
+import com.company.LinkedList.LinkedListExample;
 import com.company.staticMethodAndVariable.Calculator;
 import com.company.thisvssuper.Rectangle;
 import com.company.thisvssuper.Rectanglee;
 import com.company.thisvssuper.Shape;
+
+import java.util.LinkedList;
 
 public class Main {
 
@@ -26,7 +29,14 @@ public class Main {
         //AutoboxingAndInboxing
         AutoboxingAndInboxing autoboxingAndInboxing = new AutoboxingAndInboxing();
         autoboxingAndInboxing.fun();
+//------------------------------------------------------------------------------------
+        //LinkedList
+        System.out.println("In Linked List");
+        LinkedListExample linkedListExample= new LinkedListExample();
+        LinkedList<String> list=linkedListExample.generateSortedList();
+        linkedListExample.printList(list);
     }
+
 
     public static void fun()
     {

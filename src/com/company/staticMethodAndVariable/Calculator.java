@@ -14,8 +14,6 @@ public class Calculator {
     }
     public void printdiff(int a ,int b) {
         this.b=b;
-
         System.out.println(a-b);
     }
-
 }

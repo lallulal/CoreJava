@@ -26,6 +26,7 @@ public class Main {
         //for non-static create instance
         Calculator calculator= new Calculator();
         calculator.printdiff(20,10);
+
         //static of the same class call func directly no need of instantiation
         fun();
 //------------------------------------------------------------------------------------

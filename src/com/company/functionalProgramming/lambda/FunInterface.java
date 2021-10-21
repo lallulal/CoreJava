@@ -15,4 +15,9 @@ public interface FunInterface {
     {
         System.out.println("In static function of functional interface");
     }
+
+    // It can contain any number of Object class methods.
+    int hashCode();
+    String toString();
+    boolean equals(Object obj);
 }

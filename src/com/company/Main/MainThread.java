@@ -52,6 +52,18 @@ public class MainThread {
         myRunnableThread.setName("Implement Thread");
         myRunnableThread.start();
 
+//====================================================================================================
+        //Thread creation by lambda expression by implementing the run method of runnable class using Lambda
+        //Expression
+        Thread threadd = new Thread(()-> {
+            try {
+                Thread.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Lambda Expression Thread");
+        });
+        threadd.start();
 
 //==========================================================================================
         //Main thread
@@ -63,14 +75,15 @@ public class MainThread {
         }
         Thread.currentThread().setName("Main Thread");
         //to suspend main thread until runnable thread totally executed
-        try {
-            myRunnableThread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            myRunnableThread.join();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         for (int i = 0; i < 10; i++) {
             System.out.println(ANSI_PURPLE+"Main Class Thread "+ i+" "+Thread.currentThread().getName());
         }
         System.out.println(ANSI_RED+"Thread status "+anotherThread.getState());
+
     }
 }

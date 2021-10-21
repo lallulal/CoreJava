@@ -6,8 +6,10 @@ import com.company.functionalProgramming.lambda.FunInterface;
 import com.company.functionalProgramming.lambda.SecondFI;
 
 import java.util.Arrays;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
-public class MainLambda {
+public class MainFunPro {
     public static void main(String[] args) {
 //===================================================================================================
         ExampleLambda exampleLambda = new ExampleLambda();
@@ -19,15 +21,20 @@ public class MainLambda {
 //===================================================================================================
         //We can define the dunction of interface using three type
 
-        //Type-1 by giving the implementation of the FI class
+        //Type-1
+        // by giving the implementation of the FI class
         FunInterface funInterface = new FIIMplementation();
         funInterface.show();
+
         //We can declare and define default method in interface it just like abstract class
         // and it will still remain functional interface
         funInterface.show2();
         //We can define the static method in interface and it will still remain functional interface
         FunInterface.show3();
-        //Type-2 by not giving the implementation of FI class implementing it by anonymous class(class with no name)
+
+
+        //Type-2
+        // by not giving the implementation of FI class implementing it by anonymous class(class with no name)
         SecondFI secondFI = new SecondFI()
         {
             public void printHello() {
@@ -54,5 +61,6 @@ public class MainLambda {
         ********Imp
         lambda expressions are a way to implement interfaces without making a new class.
          */
+
     }
 }
